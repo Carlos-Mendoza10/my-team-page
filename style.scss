@@ -1,0 +1,130 @@
+.page{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: fit-content;
+    block-size: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto{
+    &__title {
+        font-family:'Times New Roman', Times, serif;
+        font-weight: 700;
+        margin: 40px 0 20px 0;
+      }
+      &__introducion {
+        &__subtitle {
+          font-size: 18px;
+        }
+        &__descripcion {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+  
+    &__person {
+      margin: 25px 8px;
+      width: 160px;
+
+        &__name {
+            margin: 5px 0;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+  
+    .--abajo {
+      transform: translateY(60px);
+      margin-left: 15px;
+      margin-right: 8px;
+      width: 160px;
+    }
+  }
+  
+  .team__person__content {
+    display: flex;
+  
+    &__foto {
+      max-width: 90%;
+      margin-right: 18px;
+    }
+  
+    &__cargo {
+      transform-origin: top left;
+      transform: rotate(90deg);
+      white-space: nowrap; //Suprime saltos de linea del texto original
+      font-weight: 400;
+      font-size: 10px;
+      margin-top: 2px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .team{
+        .--abajo {
+            transform: translateY(0px);
+          }
+    }
+  }
+  @media (min-width: 375px) {
+    .page{
+      max-width: 360px;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: 890px) {
+    .page {
+        max-width: 890px;
+    }
+   
+    .texto {
+      display: flex;
+      flex-direction: row;
+      margin: 60px 5px;
+  
+      &__title {
+        margin: 5px;
+        flex-basis: 50%;
+      }
+  
+      &__introducion {
+        display: flex;
+        flex-basis: 40%;
+        flex-direction: column;
+  
+        &__subtitle {
+          margin-top: 2px;
+        }
+        &__descripcion {
+          margin-top: 15px;
+        }
+      }
+    }
+  
+    .team {
+      &__person {
+        width: 100%;
+        max-width: 250px;
+        margin: 40px 20px;
+      }
+  
+      .--abajo {
+        width: 100%;
+        max-width: 250px;
+        margin: 40px 20px;
+        transform: none;
+      }
+  
+      .--bajarcentro {
+        transform: translateY(70px);
+      }
+    }
+  }
+  
